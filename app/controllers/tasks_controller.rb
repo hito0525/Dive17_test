@@ -15,10 +15,12 @@ class TasksController < ApplicationController
   # GET /tasks/new
   def new
     @task = Task.new
+    @task.status = 1
   end
 
   # GET /tasks/1/edit
   def edit
+    @task.status = 2
   end
 
   # POST /tasks
