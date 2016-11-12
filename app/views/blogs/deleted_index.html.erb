@@ -1,0 +1,26 @@
+<h1>Deleted Index(ステータス3だけのブログ一覧画面)</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>タイトル</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @blogs.each do |blog| %>
+      <tr>
+        <td><%= blog.title %></td>
+        <td><%= link_to 'Show', blog %></td>
+        <td><%= link_to 'Edit', edit_blog_path(blog) %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<br>
+<%= link_to 'ブログ一覧に戻る', blogs_path %>
+

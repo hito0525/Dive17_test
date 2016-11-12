@@ -15,11 +15,15 @@
     <%= f.label :title %><br>
     <%= f.text_field :title %>
   </div>
-  <div class="field">
-    <%= f.label :status %><br>
-    <%= f.number_field :status %>
-  </div>
-  <div class="actions">
+  <!-- <div class="field">
+    <%= f.hidden_field :status %><br>
+    <%= f.hidden_field :status %>
+  </div> -->
+  <!-- <div class="actions">
     <%= f.submit %>
+  </div> -->
+   <div class="actions">
+  <%= f.submit "Publish" %>
+  <%= submit_tag "Save Draft", name: "draft" %>
   </div>
 <% end %>

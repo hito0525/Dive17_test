@@ -1,12 +1,11 @@
 <p id="notice"><%= notice %></p>
 
-<h1>ブログ一覧公開保存(status 2)</h1>
+<h1>Draft Index 下書き保存（status 1）</h1>
 
 <table>
   <thead>
     <tr>
-      <th>タイトル</th>
-      <th>Status</th>
+      <th>Title</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -15,7 +14,6 @@
     <% @blogs.each do |blog| %>
       <tr>
         <td><%= blog.title %></td>
-        <td><%= blog.status %></td>
         <td><%= link_to 'Show', blog %></td>
         <td><%= link_to 'Edit', edit_blog_path(blog) %></td>
         <td><%= link_to 'Destroy', blog, method: :delete, data: { confirm: 'Are you sure?' } %></td>
@@ -27,6 +25,5 @@
 <br>
 
 <%= link_to 'New Blog', new_blog_path %>
-<br><br>
-<%= link_to 'Draft Index', draft_index_path  %>
-<%= link_to 'Deleted Index', deleted_index_path  %>
+<br>
+<%= link_to 'Back To Blogs', blogs_path %>

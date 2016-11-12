@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
 
   resources :blogs
+  get 'draft_index' => 'blogs#draft_index'
+  get 'deleted_index' => 'blogs#deleted_index'
 
 
     root 'blogs#index'
