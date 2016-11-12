@@ -12,6 +12,7 @@
     <% @blogs.each do |blog| %>
       <tr>
         <td><%= blog.title %></td>
+        <td><%= blog.status %></td>
         <td><%= link_to 'Show', blog %></td>
         <td><%= link_to 'Edit', edit_blog_path(blog) %></td>
       </tr>
